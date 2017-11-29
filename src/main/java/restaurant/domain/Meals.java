@@ -3,6 +3,7 @@ package restaurant.domain;
 public class Meals implements IHaveId {
     private int id;
     private int menuId;
+    private String name;
     private String description;
     private int price;
 
@@ -10,8 +11,9 @@ public class Meals implements IHaveId {
         super();
     }
 
-    public Meals(int menuId, String description, int price) {
+    public Meals(int menuId, String name, String description, int price) {
         this.menuId = menuId;
+        this.name = name;
         this.description = description;
         this.price = price;
     }
@@ -30,6 +32,14 @@ public class Meals implements IHaveId {
 
     public void setMenuId(int menuId) {
         this.menuId = menuId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
